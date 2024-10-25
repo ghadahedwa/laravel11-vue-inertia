@@ -1,5 +1,4 @@
 <template>
-
         <Frontend>
             <Head title="AboutPage" />
         <h1>This is {{title}}</h1>
@@ -10,6 +9,8 @@
     import Frontend from '@/Layouts/FrontendLayout.vue';
     import { Head } from '@inertiajs/vue3';
     defineProps({
-        title : String,
+        title: {
+            type: String,
+        }
     });
 </script>
