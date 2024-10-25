@@ -22,4 +22,20 @@ class FrontendController extends Controller
         ]);
         */
     }
+
+    public function about()
+    {
+        return Inertia::render('Frontend/About',
+            [
+                'title'=>'About Us Page'
+            ]);
+        /*
+         return Inertia::render('Welcome', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+            'laravelVersion' => Application::VERSION,
+            'phpVersion' => PHP_VERSION,
+        ]);
+        */
+    }
 }

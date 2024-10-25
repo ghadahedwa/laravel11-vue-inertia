@@ -1,7 +1,7 @@
 <template>
         <Frontend>
-            <Head title="HomePage" />
-        <h1>This is Home page</h1>
+            <Head title="ContactPage" />
+        <h1>This is Contact Page</h1>
         </Frontend>
 </template>
 <script setup>
