@@ -34,8 +34,9 @@
                             >
                             Back
                             </Link>
-                            <button type="submit" class="bg-blue-500 text-white py-2 px-5 rounded mb-4">
-                                Update
+                            <button type="submit" :disabled="form.processing" class="bg-blue-500 text-white py-2 px-5 rounded mb-4">
+                                <span v-if="form.processing">Updateing....</span>
+                                <span v-else>Update</span>
                             </button>
                         </div>
                     </div>

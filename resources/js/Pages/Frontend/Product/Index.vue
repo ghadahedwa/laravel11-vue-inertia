@@ -43,6 +43,7 @@
 
                         <button type="submit"
                               class="px-2 oy-1 text-sm bg-red-500 text-white me-2 rounded inline-block"
+                        @click="deleteProduct(item.id)"
                         >
                         Delete
                         </button>
@@ -57,8 +58,15 @@
 
 <script setup>
     import FrontendLayout from '@/Layouts/FrontendLayout.vue';
-    import { Head, Link } from '@inertiajs/vue3';
+    import { Head, Link ,useForm} from '@inertiajs/vue3';
     defineProps({
         products: Array
-    })
+    });
+
+    const deleteProduct = (productId)=>{
+        if(confirm('dsadasd')){
+            form.delete(route('products.delete',productId));
+        }
+    };
+    const form=useForm({});
 </script>
