@@ -54,8 +54,10 @@
                 </tr>
                 </tbody>
             </table>
+            <div class="float-end">
+                <Pagination :links="products.links" class="mt-4"/>
+            </div>
 
-            <Pagination :links="products.links" class="mt-4"/>
         </div>
     </FrontendLayout>
 
