@@ -11,6 +11,9 @@
                 <h5>Product Lists</h5>
                 <Link :href="route('products.create')" class="bg-blue-500 text-white p-3 rounded mb-4">Add Product</Link>
             </div>
+            <!--
+
+            -->
             <table class="w-full bg-white border border-gray-200 shadow">
                 <thead>
                 <tr>
@@ -21,7 +24,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr v-for="(item,index) in products"
+                <tr v-for="(item,index) in products.data"
                     :key="index"
                 >
 
@@ -51,6 +54,8 @@
                 </tr>
                 </tbody>
             </table>
+
+            <Pagination :links="products.links" class="mt-4"/>
         </div>
     </FrontendLayout>
 
@@ -58,9 +63,10 @@
 
 <script setup>
     import FrontendLayout from '@/Layouts/FrontendLayout.vue';
+    import Pagination from '@/Components/Pagination.vue';
     import { Head, Link ,useForm} from '@inertiajs/vue3';
     defineProps({
-        products: Array
+        products: [Array,Object]
     });
 
     const deleteProduct = (productId)=>{
