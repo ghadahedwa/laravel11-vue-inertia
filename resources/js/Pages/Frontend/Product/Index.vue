@@ -64,8 +64,8 @@
     });
 
     const deleteProduct = (productId)=>{
-        if(confirm('dsadasd')){
-            form.delete(route('products.delete',productId));
+        if(confirm('Are you want to delete this item?')){
+            form.delete(route('products.destroy',productId));
         }
     };
     const form=useForm({});
